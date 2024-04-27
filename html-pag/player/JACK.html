@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Jugador - Activision</title>
+    <link rel="stylesheet" href="/css/estilo-informacion.css">
+    <style>
+        .profile-img {
+            width: 150px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 0px;
+        }
+        .class-img {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .class-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .class-details {
+            margin-left: 10px;
+        }
+
+        .class-details h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .class-details p {
+            margin: 5px 0;
+        }
+
+        .class:hover .class-img {
+            transform: scale(1.1);
+        }
+
+        .mejores-jugadas {
+            margin-top: 20px;
+        }
+
+        .video {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video iframe:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Perfil de Jugador</h1>
+            <button class="menu-btn">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="profile">
+            <div class="profile-info">
+                <div class="profile-img">
+                    <img src="/img/JACK.jpg" alt="Player">
+                </div>
+                <div class="player-details">
+                    <h2>Nombre de Usuario</h2>
+                    <p>ID Warzone: JackMuller</p>
+                    <p>Plataforma: PS4</p>
+                    <div class="player-style">
+                        <h3>Estilo de Juego</h3>
+                        <p>Como jugador, me caracterizo por jugar de forma estratégica, adoptar un enfoque táctico en todas las partidas y ser un jugador de apoyo en el equipo.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="/index.html" class="btn">Twitter</a>
+                        <a href="#" class="btn">Twitch</a>
+                        <a href="#" class="btn">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-stats">
+                <h2>Estadísticas</h2>
+                <ul>
+                    <li>Nivel: 155</li>
+                    <li>K/D Ratio (br): 0.95</li>
+                    <li>K/D Ratio (Resurgimiento): 0.90</li>
+                    <li>K/D Ratio (SAQUEO): 1.39</li>
+                    <li>K/D Ratio (RANKED): 1.02</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="classes">
+            <h2>Clases Recientes</h2>
+            <div class="class">
+                <div class="class-info">
+                    <div class="class-img">
+                        <img src="/img/RAM-7-BAUTEN.jpg" alt="RAM-7">
+                    </div>
+                    <div class="class-details">
+                        <h3>Clase - RAM-7 </h3>
+                        <p><strong>Boca de Cañón:</strong> FRENO CASUS</p>
+                        <p><strong>Cañón:</strong> CAÑÓN LARGO CRONEN HEADWIND</p>
+                        <p><strong>Culata:</strong> ALMOHADILLA HVS 3.4</p>
+                        <p><strong>Acople:</strong> EMPUÑADURA DE APOYO PESADO BRUEN</p> 
+                        <p><strong>Cargador:</strong> TAMBOR DE 60 PROYECTILES</p>
+                    </div>
+                </div>
+            </div>
+            <div class="class">
+                <div class="class-info">
+                    <div class="class-img">
+                        <img src="/img/HRM-9-BAUTTEN.jpg" alt="HRM-9">
+                    </div>
+                    <div class="class-details">
+                        <h3>Clase - HRM-9</h3>
+                        <p><strong>Cañón:</strong> Cañón thorn-90</p>
+                        <p><strong>Boca de Cañón:</strong> Supresor de Destello</p>
+                        <p><strong>Acople:</strong> Tope de mano FTAC msp-98</p>
+                        <p><strong>Cargador:</strong> Tambor de 50 balas</p>
+                        <p><strong>Culata:</strong> Culata plegable</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mejores-jugadas">
+            <h2>Mejores Jugadas</h2>
+            <div class="video">
+                <iframe width="280" height="157.5" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="280" height="157.5" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="280" height="157.5" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Agrega aquí más videos -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const nav = document.querySelector('nav ul');
+
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
